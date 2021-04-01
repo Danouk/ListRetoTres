@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MyList - SummerHack</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;;400;500;900&display=swap" rel="stylesheet">
+
+   <!-- Google meta -->
+   <meta name="description" content="Summer Hack - Reto semanal 03 - escuelaDevRock"/>
+   <meta name="keywords" content="escuelaDevRock, retosemanal, devRock, summerhack, Lista de compras"/>
+   <meta name="author" content="Debra Anouk Grimbeek"/>
+   <meta name="copyright" content="danouk">
+   <meta name="robots" content="index follow">
+ 
+   <!-- facebook meta -->
+   <meta property="og:title" content="My List App | SH - Reto Semanal 03" />
+   <meta property="og:description" content="No pierdas mas tus papelitos con la lista de compras, ahora las podes tener en tu celular"/>
+   <meta property="og:image" content="https://sh-mylist.web.app/img/note_meta.png">
+   <meta property="og:type" content="reto">
+    <meta property="fb:app_id" content="3057707970374"/>
+   <meta property="og:url" content="https://sh-mylist.web.app">
+ 
+   <!-- Twitter meta -->
+   <meta twitter="og:title" content="My List App - Reto Semanal 03" />
+   <meta twitter="og:description" content="No pierdas mas tus papelitos con la lista de compras, ahora las podes tener en tu celular" />
+   <meta twitter="og:type" content="Reto semanal" />
+   <meta twitter="og:image" content="https://sh-mylist.web.app/img/note_meta.png">
+</head>
+<body>
+
+   <header>
+
+    <div itemscope itemtype = "http://schema.org/WebApplication" style="display: none;">
+      <p itemprop="name">My List App</p>
+      <p itemprop="applicationCategory">WebApplication</p>
+      <p itemprop="operatingSystem">Mobile</p>
+      <img itemprop="screenshot" src="img/screen.png" alt="">
+      <p itemprop="abstract">webApp para lista de compras</p>
+      <p itemprop="author">Debra Grimbeek</p>
+      <div itemprop = "aggregateRating" 
+      itemscope itemtype = "https://schema.org/AggregateRating" > 
+     Calificación <span itemprop = "ratingValue" > 3.5 </span> / 5 
+     basado en <span itemprop = "reviewCount" > 11 </span> reseñas de clientes 
+    </div>
+    </div>
+
+      <ul>
+        <li> <i class="fas fa-sticky-note"></i> </li>
+        <li> <p class="marg10">My list App</p> </li>
+      </ul>
+    
+
+
+  </header>
+
+  <section class="firstSection " id="firstSection">
+    <div class="firstSection_container">
+      <!-- <h1 class="title"></h1> -->
+        <h1 class="title animate__animated animate__slideInLeft"> Por que andar con un
+        papelito que siempre perdes </h1>
+
+      <h2 class="animate__animated animate__slideInLeft">¡Usa nuestra app!</h2>
+      <p  class="animate__animated animate__slideInLeft"><span>Agregá productos a tu lista de compras!</span></p>
+      <button class="addBtn" id="addBtn"><i class="fas fa-plus"></i></button>
+    </div>
+  </section>
+
+  <section class="addList off" id="addList">
+    <div class="header_addList marg10">
+      <h1 class="title">Agregá a tu lista</h1>
+      <button type="button" class="btn-close" id="close_addList" aria-label="close_shoppingList"></button>
+    </div>
+    <hr>
+
+    <div class="marg10"> 
+      <label>Titulo</label>
+      <input type="text" id="titleList" placeholder="titulo" class="w-99">
+    </div>
+
+    <div class="marg10">
+      <label>Categoria</label>
+      <select name="categorias" id="categorias" class="w-99">
+        <option value="icons/003-bebidas-sin-alcohol.svg">Bebida</option>
+        <option value="icons/001-fruits.svg">Frutas</option>
+        <option value="icons/004-ensalada.svg">Verduras</option>
+        <option value="icons/005-salchicha.svg">Carnes</option>
+        <option value="icons/006-pasta.svg">Pastas</option>
+        <option value="icons/007-pet-house.svg">Mascotas</option>
+        <option value="icons/008-papel-higienico.svg">Higiene</option>
+        <option value="icons/009-bosque.svg">Exterior</option>
+        <option value="icons/010-computadora.svg">Tecnologia</option>
+        <option value="icons/011-deportes.svg">Deportes</option>
+      </select>
+    </div>
+
+
+    <div class="marg10"><label>Descripcion</label>
+      <textarea id="description" name="description" rows="4" cols="40">
+      </textarea>
+        <!-- <button id="addList_btn"> agregar
+        </button> -->
+        <button class="addBtn" id="addList_btn"><i class="fas fa-check"></i></button>
+
+    </div>
+
+  </section>
+
+  <section class="shoppingList-section off" id="shoppingList-section"> 
+    <div class="marg10" >
+      <h1 class="title">Tú lista de compras</h1>
+      <hr>
+    </div>
+      <div class="accordion" id="shoppingList">
+      </div>
+
+    <button class="addBtn" id="addBtn_shoppingList"><i class="fas fa-plus"></i></button>
+    <!-- <button class="agregar" id="addBtn_shoppingList"><i class="fas fa-plus"></i>agregar</button> -->
+    <!-- <button class="deleted" id="addBtn_shoppingList"><i class="fas fa-plus"></i>borrar</button> -->
+
+
+  </section>
+
+  <script type="text/javascript" src="list.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+</body>
+</html>
